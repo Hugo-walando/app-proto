@@ -24,6 +24,11 @@ export default function Navbar() {
       label: 'Contact',
     },
   ];
+  const hideNavbarOn = ['/result']; // pages où cacher la navbar
+
+  if (hideNavbarOn.includes(pathname)) {
+    return null;
+  }
 
   return (
     <nav className='w-full flex justify-between px-10 py-10'>
