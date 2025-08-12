@@ -8,6 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-purple: #9773c6;
+  --color-purple-dark: #5f03b6;
   --font-inter: var(--font-inter);
 
 }
@@ -32,7 +34,44 @@ body {
 
   .bg-purple-glow {
     background: radial-gradient(circle at center,
-        rgba(109, 14, 198, 0.7) 0%,
-        rgba(95, 3, 182, 0) 80%);
+        rgba(151, 115, 198, 1) 30%,
+        /* Violet clair lumineux au centre */
+        rgba(95, 3, 182, 0.6) 50%,
+        /* Violet plus saturé au milieu */
+        rgba(40, 0, 77, 0.8) 100%
+        /* Violet très foncé / presque noir aux bords */
+      );
   }
+
+  .bg-purple-glow-light {
+    background: radial-gradient(rgba(95, 3, 182, 0.6) 50%,
+        /* Violet plus saturé au milieu */
+        rgba(40, 0, 77, 0.8) 10%
+        /* Violet très foncé / presque noir aux bords */
+      );
+  }
+
+  .bg-white-fade {
+    @apply bg-gradient-to-r from-white/8 from-10% to-50% to-transparent
+  }
+
+  .bg-white-fade-bl {
+    @apply bg-gradient-to-br from-white/8 from-10% to-50% to-transparent
+  }
+
+  .bg-purple-fade {
+    @apply bg-gradient-to-r from-transparent from-10% to-50% to-purple-dark/20
+  }
+
+  .white-glow {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 40px rgba(255, 255, 255, 0.2);
+  }
+
+  .purple-glow {
+    box-shadow: 0 0 10px rgba(151, 115, 198, 0.8),
+      0 0 40px rgba(88, 13, 187, 0.4);
+  }
+
+
 }
