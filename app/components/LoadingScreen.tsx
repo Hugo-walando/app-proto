@@ -11,7 +11,7 @@ export default function LoadingScreen({ isReady = false }: LoadingScreenProps) {
     <div className='flex flex-col items-center mt-8'>
       {/* Engrenage */}
       <motion.div
-        className='w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full'
+        className='w-16 h-16 border-4 border-purple border-t-transparent rounded-full'
         animate={{ rotate: 360 }}
         transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
       />
@@ -28,7 +28,7 @@ export default function LoadingScreen({ isReady = false }: LoadingScreenProps) {
       {/* Barre de progression */}
       <motion.div className='mt-4 w-64 h-2 bg-gray-700 rounded-full overflow-hidden'>
         <motion.div
-          className='h-full bg-purple-500'
+          className='h-full bg-purple-dark'
           initial={{ width: 0 }}
           animate={{ width: isReady ? '100%' : '60%' }}
           transition={{ duration: 0.5 }}
